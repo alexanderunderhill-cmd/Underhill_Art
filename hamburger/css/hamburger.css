@@ -1,0 +1,267 @@
+/* =========================
+   FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --base-font: 16px;
+  --type-scale: 1.25;
+
+  --h6: var(--base-font);
+  --h5: calc(var(--h6) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+
+  --dark: #2b1b12;
+  --paper: #fffaf0;
+  --accent: #a64b2a;
+}
+
+
+/* =========================
+   RESET / GENERAL STYLING
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+
+  background-image: url("https://img.freepik.com/free-photo/paper-texture_1194-5999.jpg?t=st=1731596357~exp=1731599957~hmac=a6171db3fdc306b4ad49d684a41ca3b377d4ad88f20304bbaa4e44674dac2ed9&w=2000");
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+header,
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 4px dotted var(--dark);
+}
+
+header h1 {
+  margin: 0 0 15px;
+
+  font-family: "Comic Neue", cursive;
+  font-size: var(--h1);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+header p {
+  max-width: 750px;
+  margin: 0 auto;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 3fr;
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   INGREDIENTS SIDEBAR
+========================= */
+
+.ingredients {
+  padding: 25px;
+
+  background-color: var(--paper);
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+
+  font-size: 15px;
+}
+
+.ingredients h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-family: "Comic Neue", cursive;
+  font-size: var(--h4);
+  font-weight: 700;
+
+  border-bottom: 2px dotted var(--dark);
+  padding-bottom: 8px;
+}
+
+.ingredients ul {
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.ingredients li {
+  list-style: none;
+
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+
+  line-height: 1.5;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instructions {
+  width: 100%;
+  padding: 10px;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.instructions h2 {
+  margin-top: 0;
+
+  font-family: "Comic Neue", cursive;
+  font-size: var(--h3);
+  font-weight: 700;
+}
+
+.intro {
+  padding: 15px 20px;
+
+  background-color: var(--paper);
+  border-left: 5px solid var(--accent);
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   BURGER IMAGE
+========================= */
+
+.instructions img {
+  display: block;
+
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+
+  margin: 25px auto;
+
+  border: 4px solid var(--dark);
+  border-radius: 10px;
+}
+
+
+/* =========================
+   RECIPE STEPS
+========================= */
+
+.step {
+  padding: 20px;
+  margin-bottom: 25px;
+
+  background-color: rgba(255, 250, 240, 0.75);
+
+  border-bottom: 3px dotted var(--dark);
+}
+
+.step h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: var(--accent);
+
+  font-family: "Comic Neue", cursive;
+  font-size: var(--h5);
+  font-weight: 700;
+}
+
+.step p {
+  margin: 0 0 12px;
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 20px 10px;
+  }
+
+  header,
+  main {
+    width: 100%;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: var(--h3);
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .ingredients {
+    width: 100%;
+  }
+
+  .instructions {
+    padding: 0;
+  }
+
+  .step {
+    padding: 15px;
+  }
+
+}

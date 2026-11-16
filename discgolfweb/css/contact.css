@@ -1,0 +1,523 @@
+
+/* ------------------------------
+   General Styles
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F3EA;
+    color: #292D2A;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+.site-header {
+    width: 100%;
+    min-height: 75px;
+    padding: 8px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #183D2B;
+}
+
+.logo img {
+    width: 115px;
+    height: auto;
+    display: block;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.site-header nav a {
+    color: #F5F3EA;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: #D9C9A3;
+}
+
+
+/* ------------------------------
+   Shared Styles
+------------------------------ */
+
+.section-padding {
+    padding: 85px 8%;
+}
+
+.eyebrow {
+    color: #A9BD91;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+/* ------------------------------
+   Contact Hero
+------------------------------ */
+
+.contact-hero {
+    min-height: 430px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 35, 24, 0.55),
+            rgba(15, 35, 24, 0.72)
+        ),
+        url("../images/woods.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #F5F3EA;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.contact-hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-hero p:not(.eyebrow) {
+    font-size: 1.1rem;
+}
+
+
+/* ------------------------------
+   Contact Introduction
+------------------------------ */
+
+.contact-intro {
+    text-align: center;
+    max-width: 950px;
+    margin: auto;
+}
+
+.contact-intro h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.contact-intro > p:not(.eyebrow) {
+    color: #555D54;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* ------------------------------
+   Booking Section
+------------------------------ */
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 60px;
+    background-color: #E8E5D8;
+}
+
+.booking-info h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.booking-info > p:not(.eyebrow) {
+    color: #555D54;
+    margin-bottom: 25px;
+}
+
+
+/* ------------------------------
+   Information Cards
+------------------------------ */
+
+.info-card {
+    padding: 22px;
+    margin-top: 20px;
+    background-color: #F5F3EA;
+    border-left: 4px solid #47734B;
+    border-radius: 4px;
+}
+
+.info-card h3 {
+    color: #183D2B;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: #555D54;
+}
+
+
+/* ------------------------------
+   Brand-Themed Contact Details
+------------------------------ */
+
+.contact-details {
+    margin-top: 35px;
+}
+
+.contact-details h2 {
+    color: #183D2B;
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.contact-description {
+    color: #555D54;
+    margin-bottom: 25px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    margin-bottom: 16px;
+    background-color: #183D2B;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(16, 41, 29, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-detail:hover {
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9C9A3;
+    color: #183D2B;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.contact-content h3 {
+    color: #F5F3EA;
+    margin-bottom: 3px;
+}
+
+.contact-content p {
+    color: #A9BD91;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.contact-content a {
+    color: #D9C9A3;
+    font-weight: bold;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    overflow-wrap: anywhere;
+}
+
+.contact-content a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Brand Tagline
+------------------------------ */
+
+.contact-tagline {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 25px;
+    background-color: #D9C9A3;
+    border-radius: 6px;
+}
+
+.contact-tagline span {
+    font-size: 1.8rem;
+}
+
+.contact-tagline p {
+    color: #183D2B;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.contact-tagline strong {
+    color: #47734B;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+/* ------------------------------
+   Booking Form
+------------------------------ */
+
+.booking-form-container {
+    width: 100%;
+    padding: 35px;
+    background-color: #F5F3EA;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(16, 41, 29, 0.08);
+}
+
+.booking-form h2 {
+    color: #183D2B;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #183D2B;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #D4D1C5;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #292D2A;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #47734B;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ------------------------------
+   Submit Button
+------------------------------ */
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #183D2B;
+    color: #F5F3EA;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #47734B;
+    transform: translateY(-2px);
+}
+
+.form-note {
+    margin-top: 15px;
+    color: #777D73;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+/* ------------------------------
+   Bottom CTA
+------------------------------ */
+
+.contact-cta {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #183D2B;
+    color: #F5F3EA;
+}
+
+.contact-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 12px;
+}
+
+.contact-cta > p:not(.eyebrow) {
+    color: #E8E5D8;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #D9C9A3;
+    color: #183D2B;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #E8E5D8;
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.site-footer {
+    background-color: #10291D;
+    color: #F5F3EA;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-footer h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.site-footer p {
+    color: #D9C9A3;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+
+/* ------------------------------
+   Mobile Responsive
+------------------------------ */
+
+@media (max-width: 800px) {
+
+    .booking-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .site-header {
+        min-height: 70px;
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .site-header nav {
+        gap: 12px;
+    }
+
+    .site-header nav a {
+        font-size: 0.8rem;
+    }
+
+    .contact-hero {
+        min-height: 380px;
+        padding: 70px 6%;
+    }
+
+    .section-padding {
+        padding: 65px 6%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-form-container {
+        padding: 22px;
+    }
+
+    .contact-detail {
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .contact-icon {
+        min-width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .contact-content a {
+        font-size: 0.95rem;
+    }
+
+    .contact-cta {
+        padding: 65px 6%;
+    }
+
+}

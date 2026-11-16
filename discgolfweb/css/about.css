@@ -1,0 +1,325 @@
+
+/* ------------------------------
+   General Styles
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F3EA;
+    color: #292D2A;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+.site-header {
+    width: 100%;
+    min-height: 75px;
+    padding: 8px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #183D2B;
+}
+
+.logo img {
+    width: 115px;
+    height: auto;
+    display: block;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.site-header nav a {
+    color: #F5F3EA;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: #D9C9A3;
+}
+
+/* ------------------------------
+   Shared Styles
+------------------------------ */
+
+.section-padding {
+    padding: 85px 8%;
+}
+
+.eyebrow {
+    color: #A9BD91;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------
+   About Hero
+------------------------------ */
+
+.about-hero {
+    min-height: 430px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 35, 24, 0.55),
+            rgba(15, 35, 24, 0.72)
+        ),
+        url("../images/woods.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #F5F3EA;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.about-hero p:not(.eyebrow) {
+    font-size: 1.1rem;
+}
+
+/* ------------------------------
+   Our Story
+------------------------------ */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-photo {
+    width: 100%;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 6px;
+    display: block;
+}
+
+.about-text h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-text p:not(.eyebrow) {
+    color: #555D54;
+    margin-bottom: 18px;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 13px 25px;
+    background-color: #D9C9A3;
+    color: #183D2B;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #E8E5D8;
+    transform: translateY(-3px);
+}
+
+/* ------------------------------
+   Mission
+------------------------------ */
+
+.mission {
+    background-color: #183D2B;
+    color: #F5F3EA;
+    text-align: center;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mission h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.mission p:not(.eyebrow) {
+    color: #E8E5D8;
+    font-size: 1.05rem;
+}
+
+/* ------------------------------
+   Vermont
+------------------------------ */
+
+.vermont {
+    background-color: #E8E5D8;
+    text-align: center;
+}
+
+.vermont-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.vermont h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.vermont p:not(.eyebrow) {
+    color: #555D54;
+    font-size: 1.05rem;
+}
+
+/* ------------------------------
+   Contact
+------------------------------ */
+
+.about-contact {
+    text-align: center;
+    background-color: #F5F3EA;
+}
+
+.about-contact h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.about-contact > p:not(.eyebrow) {
+    color: #555D54;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.site-footer {
+    background-color: #10291D;
+    color: #F5F3EA;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-footer h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.site-footer p {
+    color: #D9C9A3;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* ------------------------------
+   Mobile Responsive
+------------------------------ */
+
+@media (max-width: 800px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .site-header {
+        min-height: 70px;
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .site-header nav {
+        gap: 12px;
+    }
+
+    .site-header nav a {
+        font-size: 0.8rem;
+    }
+
+    .about-hero {
+        min-height: 380px;
+        padding: 70px 6%;
+    }
+
+    .section-padding {
+        padding: 65px 6%;
+    }
+
+    .about-photo img {
+        height: auto;
+        max-height: none;
+    }
+}

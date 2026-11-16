@@ -1,0 +1,378 @@
+
+/* ------------------------------
+   General Styles
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F3EA;
+    color: #292D2A;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+.site-header {
+    width: 100%;
+    min-height: 75px;
+    padding: 8px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #183D2B;
+}
+
+.logo img {
+    width: 115px;
+    height: auto;
+    display: block;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.site-header nav a {
+    color: #F5F3EA;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: #D9C9A3;
+}
+
+/* ------------------------------
+   Rental Hero
+------------------------------ */
+
+.rental-hero {
+    min-height: 430px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 35, 24, 0.55),
+            rgba(15, 35, 24, 0.72)
+        ),
+        url("../images/woods.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #F5F3EA;
+}
+
+.rental-hero-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    color: #A9BD91;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.rental-hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.rental-hero-content > p:not(.eyebrow) {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #D9C9A3;
+    color: #183D2B;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #F5F3EA;
+    transform: translateY(-3px);
+}
+
+/* ------------------------------
+   General Sections
+------------------------------ */
+
+.section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    color: #183D2B;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: #646B62;
+}
+
+/* ------------------------------
+   Included Section
+------------------------------ */
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.included-item {
+    padding: 25px;
+    background-color: #E8E5D8;
+    border-radius: 5px;
+    border-bottom: 3px solid #47734B;
+}
+
+.included-item span {
+    color: #47734B;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.included-item h3 {
+    color: #183D2B;
+    margin: 12px 0;
+}
+
+.included-item p {
+    color: #626960;
+    font-size: 0.95rem;
+}
+
+/* ------------------------------
+   Rental Packages
+------------------------------ */
+
+.packages {
+    background-color: #E8E5D8;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.package-card {
+    background-color: #F5F3EA;
+    padding: 35px 28px;
+    border-radius: 6px;
+    border-top: 4px solid #47734B;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-7px);
+}
+
+.package-label {
+    color: #47734B;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.package-card h3 {
+    color: #183D2B;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.package-description {
+    color: #626960;
+    margin-bottom: 20px;
+}
+
+.package-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.package-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #E1DED2;
+    color: #555D54;
+}
+
+.package-card li::before {
+    content: "✓";
+    color: #47734B;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.price {
+    color: #183D2B;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #626960;
+}
+
+.package-card .btn {
+    text-align: center;
+}
+
+/* Featured Package */
+
+.package-card.featured {
+    border-top: 4px solid #D9A441;
+    box-shadow: 0 8px 25px rgba(24, 61, 43, 0.12);
+}
+
+.package-card.featured .package-label {
+    color: #9A702B;
+}
+
+/* ------------------------------
+   Contact Section
+------------------------------ */
+
+.rental-contact {
+    text-align: center;
+    background-color: #183D2B;
+    color: #F5F3EA;
+}
+
+.rental-contact h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.rental-contact > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.btn-light {
+    background-color: #F5F3EA;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.site-footer {
+    background-color: #10291D;
+    color: #F5F3EA;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-footer h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.site-footer p {
+    color: #D9C9A3;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* ------------------------------
+   Mobile Responsive
+------------------------------ */
+
+@media (max-width: 900px) {
+    .included-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        min-height: 70px;
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .site-header nav {
+        gap: 12px;
+    }
+
+    .site-header nav a {
+        font-size: 0.8rem;
+    }
+
+    .rental-hero {
+        min-height: 380px;
+        padding: 70px 6%;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .included-grid,
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+}
